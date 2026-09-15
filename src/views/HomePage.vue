@@ -398,12 +398,13 @@ const formatDate = (date: string) => {
 
 .page-content {
   --background: #0e1110;
+  --padding-bottom: var(--ion-safe-area-bottom, env(safe-area-inset-bottom, 0px));
 }
 
 .topbar {
   --background: #0e1110;
   --color: #ffffff;
-  padding-top: 5px;
+  padding-top: calc(5px + var(--ion-safe-area-top, env(safe-area-inset-top, 0px)));
 }
 
 .brand {
