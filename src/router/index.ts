@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import HomePage from '../views/HomePage.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,10 +9,17 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/home',
-    name: 'Home',
-    component: HomePage
+    component: () => import('../views/HomePage.vue')
+  },
+  {
+    path: '/add-workout',
+    component: () => import('../views/AddWorkout.vue')
+  },
+  {
+    path: '/edit-workout/:id',
+    component: () => import('../views/EditWorkout.vue')
   }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -30,3 +30,14 @@ npm-debug.log*
 /platforms
 /plugins
 /www
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Android local and generated files
+/android/.idea/
+/android/.gradle/
+/android/local.properties
+/android/**/build/
